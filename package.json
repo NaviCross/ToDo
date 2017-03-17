@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/romabelka/js_ru_01_07.git"
+    "url": "git+https://github.com/NaviCross/ToDo.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/romabelka/js_ru_01_07.git"
+    "url": "https://github.com/NaviCross/ToDo.git"
   },
-  "homepage": "https://github.com/romabelka/js_ru_01_07.git",
+  "homepage": "https://github.com/NaviCross/ToDo.git",
   "devDependencies": {
     "babel-core": "^6.5.2",
     "babel-loader": "^6.2.3",
