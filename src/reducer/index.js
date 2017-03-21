@@ -1,8 +1,18 @@
-import articles from './articles'
-import counter from './counter'
 import { combineReducers } from 'redux'
+import mainMenu from './mainMenu'
+
 
 export default combineReducers({
-    count: counter,
-    articles
+    mainMenu
 })
+
+
+
+
+
+
+
+
+
+
+
