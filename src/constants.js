@@ -17,6 +17,7 @@ export const  GET_SINGLE_ITEM = 'GET_SINGLE_ITEM'
 
 export const  ADD_TODO = 'ADD_TODO'
 export const  DELETE_TODO = 'DELETE_TODO'
+export const  LOAD_ALL_TODO = 'LOAD_ALL_TODO'
 
 
 

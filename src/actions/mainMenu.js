@@ -1,4 +1,4 @@
-import {ADD_TODO, DELETE_TODO} from '../constants'
+import {ADD_TODO, DELETE_TODO, LOAD_ALL_TODO, GET} from '../constants'
 
 
 export function addToDo(name, id) {
@@ -23,3 +23,16 @@ export function deleteToDo(id, todoList) {
 
     }
 }
+
+export function loadAllToDo() {
+    console.log('yep')
+    return {
+        type: LOAD_ALL_TODO,
+        callAPI: '/api/posts',
+        method: GET
+
+    }
+
+
+}
+

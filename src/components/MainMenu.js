@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import {addToDo, deleteToDo} from '../actions/mainMenu'
+import {addToDo, deleteToDo, loadAllToDo} from '../actions/mainMenu'
 
 
 
@@ -24,6 +24,7 @@ class MainMenu extends Component {
                     </label>
                     <input type="submit" value="Submit" onClick={this.handleSubmit} />
                 </form>
+                <button onClick={this.loadAll}>load all</button>
                 <ul>
                     {todoLi}
 
@@ -31,6 +32,10 @@ class MainMenu extends Component {
             </div>
         )
 
+    }
+    loadAll = (event) => {
+        event.preventDefault()
+        this.props.loadAllToDo()
     }
 
     handleChange = (event) => {
@@ -58,7 +63,8 @@ export default connect((state) => ({
     todoList: state
     }), {
         addToDo,
-     deleteToDo
+     deleteToDo,
+    loadAllToDo
     })(MainMenu)
 
 
