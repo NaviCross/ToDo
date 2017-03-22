@@ -12,10 +12,11 @@ module.exports = {
         publicPath: '/static/'
     },
     devServer: {
-      proxy: [{
-          path: '/api/*',
-          target: 'http://localhost:3004'
-      }]
+        historyApiFallback: true,
+        proxy: [{
+            path: '/api/*',
+            target: 'http://localhost:3004/db'
+        }]
     },
     module: {
         loaders: [

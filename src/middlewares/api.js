@@ -16,7 +16,7 @@ export default store => next => action => {
                 },
                 headers: {'Authorization': 'Bearer ' + token}
             }).then(response => {
-                console.log('I AM API!!!!!', data, response)
+                console.log(token, 'I AM API!!!!!', data,'response', response)
                 next({...rest, data, response, type: type + SUCCESS})
             }).catch(error => {
                 next({...rest, type: type + FAIL, error})
@@ -31,14 +31,8 @@ export default store => next => action => {
             })
             break
         case DELETE:
-            axios({
-                method: 'delete',
-                url: callAPI,
-                params: {
-                    data: data
-                },
-                headers: {'Authorization': 'Bearer ' + token}
-            }).then(response => {
+
+            axios.delete(callAPI,  {headers: {'Authorization': 'Bearer ' + token}}).then(response => {
                 console.log('DELETE---RESPONSE----', response)
                 next({...rest, response, type: type + SUCCESS})
             }).catch(error => {
@@ -46,3 +40,20 @@ export default store => next => action => {
             })
     }
 }
+
+
+// case DELETE:
+//     console.log('DELETE', data.id)
+// axios.delete({
+//     method: 'delete',
+//     url: callAPI,
+//     params: {
+//         data: data
+//     },
+//     headers: {'Authorization': 'Bearer ' + token}
+// }).then(response => {
+//     console.log('DELETE---RESPONSE----', response)
+//     next({...rest, response, type: type + SUCCESS})
+// }).catch(error => {
+//     next({...rest, type: type + FAIL, error})
+// })
